@@ -1,0 +1,12 @@
+Required
+1. Makefile.am
+2. Configure.ac.
+3. Sources
+
+Run automake to generate Makefile.in from Makefile.am
+Run autoconf to generate configure script from Configure.ac
+Run ./configure to generate Makefile from Makefile.in
+
+Run make dist to make shippable distribution
+Run make install to install library for usage
+
