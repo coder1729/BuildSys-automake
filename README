@@ -1,1 +1,40 @@
 https://docs.google.com/document/d/1qHAwoKikQDXUdiQhWAhB1ZBAdRpTTgnWfuXdXjjv79g/edit
+
+
+
+
+It is textual file that includes description of library.
+
+It allows libtool create platform independent names.
+
+For example, libfoo goes to:
+
+Under linux:
+
+/lib/libfoo.so       # symlink to shared object
+/lib/libfoo.so.1     # symlink to shared object
+/lib/libfoo.so.1.0.1 # shared object
+/lib/libfoo.a        # static library
+/lib/libfoo.la       # libtool library
+
+Under cygwin:
+
+/lib/libfoo.dll.a    # import library
+/lib/libfoo.a        # static library
+/lib/libfoo.la       # libtool library
+/bin/cygfoo_1.dll    # dll
+
+Under windows mingw:
+
+/lib/libfoo.dll.a    # import library
+/lib/libfoo.a        # static library
+/lib/libfoo.la       # libtool library
+/bin/foo_1.dll       # dll
+
+So libfoo.la is the only file that preserved between platforms by libtool allowing to understand, what happens with:
+
+    library dependencies
+    actual file names
+    library version and revision
+
+Without depending on specific platform implementation of libraries
