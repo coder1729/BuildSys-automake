@@ -24,8 +24,22 @@ lib_LTLIBRARIES = libhelloworld.la
 libhelloworld_la_SOURCES = main.c
 libhelloworld_la_LDFLAGS = -version-info 0:0:0
 
+
+#Why is .la for shared libs?
+#-See README
+
+
+
+
+
+
+
 # will make a .so file in /usr/local/lib
 #usr/local/lib is libhelloworld.so        libhelloworld.so.0      libhelloworld.so.0.0.0
+
+
+
+
 
 #For static library
 #lib_LTLIBRARIES = libhelloworld.a
