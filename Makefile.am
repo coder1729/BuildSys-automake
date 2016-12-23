@@ -14,7 +14,8 @@ bin_PROGRAMS = helloworld
 # ruby_DATA as the names of your programs
 
 helloworld_SOURCES = main.c
-helloworld_LDADD = /home/ishan/Desktop/libhello.so
+helloworld_LDADD = /home/ishan/Desktop/libhello.so 
+# or .a static library
 # or so similar
 # helloworld or the name of the program built
 
