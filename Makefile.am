@@ -25,3 +25,8 @@ libhelloworld_la_LDFLAGS = -version-info 0:0:0
 
 # will make a .so file in /usr/local/lib
 #usr/local/lib is libhelloworld.so        libhelloworld.so.0      libhelloworld.so.0.0.0
+
+#For static library
+#lib_LTLIBRARIES = libhelloworld.a
+#libhelloworld_a_SOURCES = main.c
+#libhelloworld_a_LDFLAGS = -version-info 0:0:0
