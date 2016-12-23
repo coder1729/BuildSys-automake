@@ -1,5 +1,6 @@
 AUTOMAKE_OPTIONS = foreign
 bindir = build
+#Add libdir instead for adding library path for eg in /home/sfsf/sdwds/Desktop/
 #Make an execuable
 bin_PROGRAMS = helloworld
 
