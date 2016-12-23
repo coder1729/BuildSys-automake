@@ -1,6 +1,9 @@
 AUTOMAKE_OPTIONS = foreign
 bindir = build
+#Make an execuable
 bin_PROGRAMS = helloworld
+
+
 # PROGRAMS need to be built but scripts and data need not
 # bin specifies that the file listed here namely helloworld 
 # should be installed to the directory given by bindir
@@ -13,3 +16,11 @@ helloworld_SOURCES = main.c
 helloworld_LDADD = /home/ishan/Desktop/libhello.so
 # or so similar
 # helloworld or the name of the program built
+
+
+lib_LTLIBRARIES = libhelloworld.la
+libhelloworld_la_SOURCES = main.c
+libhelloworld_la_LDFLAGS = -version-info 0:0:0
+
+# will make a .so file in /usr/local/lib
+#usr/local/lib is libhelloworld.so        libhelloworld.so.0      libhelloworld.so.0.0.0
